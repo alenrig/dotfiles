@@ -1,0 +1,5 @@
+[user]
+	email = agorokhov94@gmail.com
+	name = Aleksandr Gorokhov
+[core]
+	excludesfile = /home/gorokhov/.gitignore
