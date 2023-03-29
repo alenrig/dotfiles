@@ -1,5 +1,15 @@
 [user]
-	email = agorokhov94@gmail.com
-	name = Aleksandr Gorokhov
+  email = agorokhov94@gmail.com
+  name = Aleksandr Gorokhov
 [core]
-	excludesfile = /home/gorokhov/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[push]
+  default = simple
+[pull]
+  rebase = true
