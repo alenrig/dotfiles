@@ -1,12 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$(brew --prefix openvpn)/sbin:$PATH
-
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME"/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will # load a random theme each time oh-my-zsh is loaded, in which case,
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="dracula"
@@ -59,10 +52,11 @@ ZSH_THEME="dracula"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH=/Users/alenrig/.oh-my-zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -70,45 +64,24 @@ ZSH_THEME="dracula"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(brew git)
+plugins=(
+  ansible
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-  export TERM=xterm-256color
-else
-  export EDITOR='vim'
-  export TERM=xterm-256color
-fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+alias bubu='brew upgrade && brew cleanup && brew update && brew outdated'
 alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
-# alias python='python3'
-# alias pip='pip3'
-# alias ipython='ipython3'
-alias vim='nvim'
 
-alias hack='sudo sysctl -w net.inet.ip.ttl=65'
-alias vpn='sudo openvpn --config /Users/alenrig/.vpn/client.ovpn'
+eval $(thefuck --alias)
+
+export PATH=$PATH:$HOME/go/bin
+
+source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
