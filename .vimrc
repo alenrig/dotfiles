@@ -1,46 +1,128 @@
-syntax on               " enable syntax highlighting
-set cursorline          " highlight the current line
-" set background=dark   " darker color scheme
-" set ruler             " show line number in bar
-set nobackup            " don't create pointless backup files; Use VCS instead
-set autoread            " watch for file changes
-set number              " show line numbers
-set showcmd             " show selection metadata
-set showmode            " show INSERT, VISUAL, etc. mode
-set showmatch           " show matching brackets
-set autoindent smartindent  " auto/smart indent
-set smarttab            " better backspace and tab functionality
-set scrolloff=5         " show at least 5 lines above/below
-filetype on             " enable filetype detection
-filetype indent on      " enable filetype-specific indenting
-filetype plugin on      " enable filetype-specific plugins
-" colorscheme cobalt      " requires cobalt.vim to be in ~/.vim/colors
+" =====================================================
+" Plugins Manager
+" =====================================================
+set nocompatible
+filetype plugin on
+syntax on
 
-" column-width visual indication
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#001D2F
+set laststatus=2
+set ttyfast
+set undofile
+set noshowmode
+set omnifunc=syntaxcomplete#Complete
+set rtp+=~/.vim/bundle/Vundle.vim
 
-" tabs and indenting
-set autoindent          " auto indenting
-set smartindent         " smart indenting
-set expandtab           " spaces instead of tabs
-set tabstop=2           " 2 spaces for tabs
-set shiftwidth=2        " 2 spaces for indentation
+call vundle#begin()
 
-" bells
-set noerrorbells        " turn off audio bell
-set visualbell          " but leave on a visual bell
+"--------------=== Navigation ===---------------
+Plugin 'scrooloose/nerdtree'
 
-" search
-set hlsearch            " highlighted search results
-set showmatch           " show matching bracket
+"--------------=== Languages support ===---------------
+"--- Universal ---
+Plugin 'jiangmiao/auto-pairs'		" автодополнение скобок
 
-" other
-set guioptions=aAace    " don't show scrollbar in MacVim
-" call pathogen#infect()  " use pathogen
+" - Git -
+Plugin 'airblade/vim-gitgutter'
 
-" clipboard
-set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
+"--------------=== Other ===---------------
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-" shortcuts
+Plugin 'vimwiki/vimwiki'
+
+Plugin 'tpope/vim-surround'             " Parentheses, brackets, quotes, XML tags, and more
+Plugin 'tpope/vim-fugitive'		" git inside vim
+Plugin 'tpope/vim-repeat'		" Repeat plugin by dot command
+Plugin 'tpope/vim-commentary'           " Simple commentary
+
+Plugin 'jeetsukumaran/vim-indentwise'   " Motion based on indent depths
+
+Plugin 'powerman/vim-plugin-ruscmd'     " русификатор команд
+
+" ---=== Themes ===---
+Plugin 'dracula/vim'
+
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+"=====================================================
+" General Settings
+"=====================================================
+set t_Co=256
+syntax on
+colorscheme dracula
+highlight Normal ctermbg=NONE
+set termguicolors
+
+set noerrorbells
+set number
+set relativenumber
+set path+=**		" search for every subdirectory
+set nowrap
+set nobackup
+set noundofile
+set nowritebackup
+set encoding=utf8
+set fileencoding=utf8
+set mousehide
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set autoindent		" always set autoindenting on
+set wildmenu		" show all matching files after Tab
+set wcm=<Tab>
+set foldnestmax=2
+
+setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2 smartindent
+
+let g:auto_save = 1
+
+" --- Search ---
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" The matchit plugin makes the % command work better, but it is not backwards compatible.
+packadd matchit
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" настройки Vim-Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'dracula'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+
+"=====================================================
+" Keys Bindings
+"=====================================================
+" ===== Nerd Tree Options =====
+" close Nerd Tree if it is a last opened window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" показать NERDTree на F2
 map <F2> :NERDTreeToggle<CR>
+
+"=== Escape insert mode via 'jj' ===
+imap jj <ESC>
+
+" автокомплит через <Ctrl+Space>
+inoremap <C-space> <C-x><C-o>
+
+"=================================
+" Python settings
+"=================================
+autocmd FileType py setlocal expandtab shiftwidth=4 tabstop=4
+\ softtabstop=4 smartindent
