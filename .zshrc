@@ -65,7 +65,6 @@ ZSH=/Users/alenrig/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-  ansible
   git
 )
 
