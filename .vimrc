@@ -21,14 +21,9 @@ Plugin 'scrooloose/nerdtree'
 "--- Universal ---
 Plugin 'jiangmiao/auto-pairs'		" автодополнение скобок
 
-" - Git -
-Plugin 'airblade/vim-gitgutter'
-
 "--------------=== Other ===---------------
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-Plugin 'vimwiki/vimwiki'
 
 Plugin 'tpope/vim-surround'             " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'tpope/vim-fugitive'		" git inside vim
