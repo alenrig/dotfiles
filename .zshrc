@@ -65,7 +65,13 @@ ZSH=/Users/alenrig/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
+  ansible
+  docker
   git
+  terraform
+  minikube
+  nvm
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
