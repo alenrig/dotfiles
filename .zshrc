@@ -68,10 +68,11 @@ plugins=(
   ansible
   docker
   git
-  terraform
+  kubectl
   minikube
   nvm
-  kubectl
+  pipenv
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
