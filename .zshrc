@@ -86,8 +86,6 @@ alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
 
-eval $(thefuck --alias)
-
 export PATH=$PATH:$HOME/go/bin
 
 source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
