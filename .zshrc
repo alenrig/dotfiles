@@ -86,6 +86,7 @@ alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
 
+export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
 
 source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
