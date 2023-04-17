@@ -68,6 +68,7 @@ plugins=(
   ansible
   docker
   git
+  helm
   kubectl
   minikube
   nvm
