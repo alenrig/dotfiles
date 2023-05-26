@@ -35,7 +35,7 @@ Plugin 'jeetsukumaran/vim-indentwise'   " Motion based on indent depths
 Plugin 'powerman/vim-plugin-ruscmd'     " русификатор команд
 
 " ---=== Themes ===---
-Plugin 'dracula/vim'
+"Plugin 'dracula/vim'
 
 
 Plugin 'VundleVim/Vundle.vim'
@@ -49,7 +49,7 @@ filetype plugin indent on    " required
 "=====================================================
 set t_Co=256
 syntax on
-colorscheme dracula
+"colorscheme dracula
 highlight Normal ctermbg=NONE
 set termguicolors
 
@@ -96,7 +96,7 @@ endif
 " настройки Vim-Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
+"let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
