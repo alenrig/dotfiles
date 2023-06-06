@@ -109,6 +109,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " показать NERDTree на F2
 map <F2> :NERDTreeToggle<CR>
+let g:NERDTreeIgnore = ['.git']
 
 "=== Escape insert mode via 'jj' ===
 imap jj <ESC>
