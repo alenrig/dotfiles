@@ -92,10 +92,6 @@ alias mv='mv -vi'
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 # Fig post block. Keep at the bottom of this file.
