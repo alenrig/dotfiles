@@ -1,6 +1,6 @@
 [user]
-  email = agorokhov94@gmail.com
-  name = Aleksandr Gorokhov
+	email = agorokhov94@gmail.com
+	name = Aleksandr Gorokhov
 [core]
   editor = vim
 	excludesfile = /Users/alenrig/.gitignore
@@ -21,3 +21,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/alenrig/.stCommitMsg
