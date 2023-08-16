@@ -73,8 +73,6 @@ plugins=(
   helm
   kubectl
   minikube
-  nvm
-  pipenv
   terraform
 )
 
