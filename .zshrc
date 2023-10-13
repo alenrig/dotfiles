@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -90,7 +88,4 @@ alias mv='mv -vi'
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
 
-source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
