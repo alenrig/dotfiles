@@ -70,6 +70,7 @@ plugins=(
   git
   helm
   kubectl
+  nvm
   minikube
   terraform
 )
