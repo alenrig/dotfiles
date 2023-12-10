@@ -88,6 +88,3 @@ alias mv='mv -vi'
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
-
-# source /Users/alenrig/.docker/init-zsh.sh || true # Added by Docker Desktop
-#[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
