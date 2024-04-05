@@ -88,3 +88,10 @@ alias mv='mv -vi'
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/Users/alenrig/yandex-cloud/path.bash.inc' ]; then source '/Users/alenrig/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/alenrig/yandex-cloud/completion.zsh.inc' ]; then source '/Users/alenrig/yandex-cloud/completion.zsh.inc'; fi
+
