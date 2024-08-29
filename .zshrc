@@ -95,3 +95,6 @@ if [ -f '/Users/alenrig/yandex-cloud/path.bash.inc' ]; then source '/Users/alenr
 # The next line enables shell command completion for yc.
 if [ -f '/Users/alenrig/yandex-cloud/completion.zsh.inc' ]; then source '/Users/alenrig/yandex-cloud/completion.zsh.inc'; fi
 
+
+# Created by `pipx` on 2024-08-29 10:38:29
+export PATH="$PATH:/Users/alenrig/.local/bin"
