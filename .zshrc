@@ -88,7 +88,7 @@ alias mv='mv -vi'
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/.config/emacs/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/alenrig/yandex-cloud/path.bash.inc' ]; then source '/Users/alenrig/yandex-cloud/path.bash.inc'; fi
