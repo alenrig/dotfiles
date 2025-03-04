@@ -1,17 +1,38 @@
-[user]
-	email = agorokhov94@gmail.com
-	name = Aleksandr Gorokhov
 [core]
   editor = vim
-	excludesfile = /Users/alenrig/.gitignore
+  excludesfile = /Users/alenrig/.gitignore
+[user]
+  email = agorokhov94@gmail.com
+  name = Aleksandr Gorokhov
+[column]
+  ui = auto
 [color]
   branch = auto
   diff = auto
   interactive = auto
   status = auto
-[push]
-  default = simple
+[branch]
+  sort = -committerdate
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[commit]
+  verbose = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
 [pull]
   rebase = true
+[push]
+  default = simple
+  autoSetupRemote = true
+[rerere]
+  enabled = true
+  autoupdate = true
+[help]
+  autocorrect = prompt
 [includeIf "gitdir:~/Developer/work/"]
-    path = ~/Developer/work/.gitconfig
+  path = ~/Developer/work/.gitconfig
