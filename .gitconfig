@@ -36,3 +36,5 @@
   autocorrect = prompt
 [includeIf "gitdir:~/Developer/work/"]
   path = ~/Developer/work/.gitconfig
+[gitlab "gitlab.lsnext.ru/api/v4"]
+	user = ANGorohov
